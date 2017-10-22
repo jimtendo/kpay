@@ -105,3 +105,5 @@ Storing Data (transactions, seeds, keys, etc) would be at the discretion of an E
 ## Other Considerations
 
 Blockcypher probably isn't practical as an engine due to Rate Limiting (unless a corporate plan is purchased). Currently searching for one that can provide transaction functionality (not just address-lookup functionality).
+
+Interfacing with Electrum Servers might actually be a viable solution here for "lite" engines.
