@@ -4,6 +4,8 @@
 
 KPay is intended to be a cryptocurrency multi-wallet built specifically for the KDE Platform. The interface will be written in QML (with Kirigami) so that in future Plasma Mobile can be supported.
 
+![Screenshot](screenshot.png?raw=true "Screenshot")
+
 ## Architecture
 
 KPay intends to be plugin-based so that other coins (or payment methods) can easily be integrated. A plugin is called an "Engine". An "Engine" can support several different currencies (BTC, LTC, etc).
