@@ -32,35 +32,35 @@ Blockcypher (Engine)
 The interface for an Engine will probably look something like the following:
 ```C++
 class Engine {
-    - virtual QQmlListProperty<QString> walletsSupported // List of wallets supported (e.g. "Bitcoin (Blockcypher)")
-    - virtual QQmlListProperty<Wallet*> wallets // List of wallets instantiated
-    - virtual signal void walletsUpdated // Used to trigger Frontend Refresh when new Wallet instantiated
+    - virtual QQmlListProperty<QString> walletsSupported(); // List of wallets supported (e.g. "Bitcoin (Blockcypher)")
+    - virtual QQmlListProperty<Wallet*> wallets(); // List of wallets instantiated
+    - virtual signal void walletsUpdated(); // Used to trigger Frontend Refresh when new Wallet instantiated
 }
 ```
 
 The interface for a Wallet will probably look something like the following:
 ```C++
 class Wallet {
-    virtual QString type()  // Wallet Type (e.g. "Bitcoin")
-    virtual QString name()  // Wallet Nickname (e.g. "Bitcoin Spending Account")
+    virtual QString type();  // Wallet Type (e.g. "Bitcoin")
+    virtual QString name();  // Wallet Nickname (e.g. "Bitcoin Spending Account")
     
     /* The "start" and "stop" methods will be used to start and stop a background worker for that
      * wallet. For example, the worker for Blockcypher may just be a Timer that polls the addresses
      * using Blockcyphers' API every 30 seconds to check for new transactions. Some other engines
      * might contain SPV clients.
      */
-    virtual bool start()
-    virtual bool stop()
+    virtual bool start();
+    virtual bool stop();
     
     /* The *QmlPath methods will return a path that contains the QML for those parts of the UI.
      * Extendable Base versions of these QML UI's will most likely be provided by KPay to ease
      * development and provide a consistent UI across different Wallets.
      */
-    virtual QString overviewQmlPath()
-    virtual QString viewTxQmlPath()
-    virtual QString sendTxQmlPath()
-    virtual QString receiveTxQmlPath()
-    virtual QString settingsQmlPath()
+    virtual QString overviewQmlPath();
+    virtual QString viewTxQmlPath();
+    virtual QString sendTxQmlPath();
+    virtual QString receiveTxQmlPath();
+    virtual QString settingsQmlPath();
 }
 ```
 
