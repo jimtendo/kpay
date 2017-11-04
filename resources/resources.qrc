@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/AddWallet.qml</file>
+        <file>qml/TransactionsDelegate.qml</file>
+        <file>qml/WalletOverview.qml</file>
+        <file>img/banner.png</file>
+        <file>data/bip-0039.txt</file>
+    </qresource>
+</RCC>

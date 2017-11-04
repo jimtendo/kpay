@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/btc-electrum">
+        <file>qml/AddWallet.qml</file>
+        <file>migrations/V0.1.sql</file>
+    </qresource>
+</RCC>
